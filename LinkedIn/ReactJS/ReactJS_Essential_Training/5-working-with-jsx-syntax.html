@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 - Working with JSX Syntax</title>
+    <link rel="stylesheet" href="../../global.css">
+</head>
+<body>
+
+    <!-- Main heading at the top right corner -->
+    <div class="chapter-heading">Chapter 2 - Intro to React Elements</div>
+
+    <!-- Subheading at the top center -->
+    <div class="chapter-subheading">(5) - Working with JSX Syntax</div>
+
+    <section>
+        <h2>Working with JSX Syntax</h2>
+        <p>JSX in React allows us to inject dynamic content into our elements simply by referencing them with variable names. Let's explore how this works.</p>
+        <p>We can start by creating variables for the content we want to inject:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/babel"</span><span class="html-tag">&gt;</span>
+    <span class="js-keyword">let</span> robot = <span class="js-keyword">'🤖'</span>;
+    <span class="js-keyword">let</span> cowboy = <span class="js-keyword">'🤠'</span>;
+    <span class="js-keyword">let</span> moon = <span class="js-keyword">'🌙'</span>;
+
+    <span class="js-keyword">let</span> name = <span class="js-keyword">'react'</span>;
+
+    <span class="js-keyword">const</span> list = (
+        <span class="html-tag">&lt;</span><span class="html-tag">ul</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>{robot}<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>{cowboy}<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>{moon}<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>{name.toUpperCase()}<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+        <span class="html-tag">&lt;/</span><span class="html-tag">ul</span><span class="html-tag">&gt;</span>
+    );
+
+    <span class="js-func">ReactDOM.render</span>(list, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>In this example, we are creating variables for <strong class="highlighted">robot</strong>, <strong class="highlighted">cowboy</strong>, and <strong class="highlighted">moon</strong> emojis. We are also using a variable <strong class="highlighted">name</strong> for the text <strong class="highlighted">react</strong>, and we are transforming it to uppercase using <strong class="highlighted">name.toUpperCase()</strong>.</p>
+        <p>JSX allows us to dynamically inject content into tags using curly braces. Additionally, we can run JavaScript functions, such as <strong class="highlighted">toUpperCase()</strong> or <strong class="highlighted">name.length</strong>, inside the curly braces to manipulate the data displayed in the UI.</p>
+    </section>
+
+</body>
+</html>

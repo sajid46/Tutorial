@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 - Adding Component Properties</title>
+    <link rel="stylesheet" href="../../global.css">
+</head>
+<body>
+
+    <!-- Main heading at the top right corner -->
+    <div class="chapter-heading">Chapter 3 - React Component</div>
+
+    <!-- Subheading at the top center -->
+    <div class="chapter-subheading">(2) - Adding Component Properties</div>
+
+    <section>
+        <h2>Adding Component Properties</h2>
+        <p>Components can take properties (props) to display dynamic data. Let’s explore how we can use props in our components to make them more flexible and reusable:</p>
+
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/babel"</span><span class="html-tag">&gt;</span>
+    <span class="js-keyword">function</span> <span class="js-func">Header</span>(props) {
+        <span class="js-keyword">console.log</span>(props);
+        <span class="js-keyword">return</span> (
+            <span class="html-tag">&lt;</span><span class="html-tag">h1</span><span class="html-tag">&gt;</span>{props.name}'s Kitchen<span class="html-tag">&lt;/</span><span class="html-tag">h1</span><span class="html-tag">&gt;</span>
+        );
+    }
+
+    <span class="js-keyword">function</span> <span class="js-func">Main</span>(props) {
+        <span class="js-keyword">return</span> (
+            <span class="html-tag">&lt;</span><span class="html-tag">section</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">p</span><span class="html-tag">&gt;</span>We serve the most {props.adjective} food.<span class="html-tag">&lt;/</span><span class="html-tag">p</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;/</span><span class="html-tag">section</span><span class="html-tag">&gt;</span>
+        );
+    }
+
+    <span class="js-keyword">function</span> <span class="js-func">Footer</span>(props) {
+        <span class="js-keyword">return</span> (
+            <span class="html-tag">&lt;</span><span class="html-tag">footer</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">p</span><span class="html-tag">&gt;</span>Copyright {props.year}<span class="html-tag">&lt;/</span><span class="html-tag">p</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;/</span><span class="html-tag">footer</span><span class="html-tag">&gt;</span>
+        );
+    }
+
+    <span class="js-keyword">function</span> <span class="js-func">App</span>() {
+        <span class="js-keyword">return</span> (
+            <span class="html-tag">&lt;</span><span class="html-tag">div</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">Header</span> <span class="html-attr">name</span>=<span class="html-value">"Cindy"</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">Main</span> <span class="html-attr">adjective</span>=<span class="html-value">"amazing"</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">Footer</span> <span class="html-attr">year</span>=<span class="html-tag">{</span><span class="js-func">new Date</span>().<span class="js-func">getFullYear</span>()<span class="html-tag">}</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;/</span><span class="html-tag">div</span><span class="html-tag">&gt;</span>
+        );
+    }
+
+    <span class="js-func">ReactDOM.render</span>(<span class="html-tag">&lt;</span><span class="html-tag">App</span><span class="html-tag">&gt;</span>, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+
+        <p>In this example, we created three components: <strong>Header</strong>, <strong>Main</strong>, and <strong>Footer</strong>, each accepting props. The props object allows us to pass dynamic values into our components, making them reusable for different scenarios.</p>
+
+        <p>For example, the <strong>Header</strong> component receives a <strong>name</strong> prop, and the <strong>Main</strong> component receives an <strong>adjective</strong> prop to customize the content dynamically. The <strong>Footer</strong> component takes a <strong>year</strong> prop, which can either be a hardcoded value or a dynamic one like the current year.</p>
+    </section>
+
+</body>
+</html>

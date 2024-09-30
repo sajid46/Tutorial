@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 - Incorporating Babel</title>
+    <link rel="stylesheet" href="../../global.css">
+</head>
+<body>
+
+    <!-- Main heading at the top right corner -->
+    <div class="chapter-heading">Chapter 2 - Intro to React Elements</div>
+
+    <!-- Subheading at the top center -->
+    <div class="chapter-subheading">(4) - Incorporating Babel</div>
+
+    <section>
+        <h2>Incorporating Babel</h2>
+        <p>When using JSX, we run into an issue because the browser doesn't natively support this syntax. To solve this, we use a tool called <strong class="highlighted">Babel</strong>. Babel compiles JSX and other modern JavaScript into code that the browser can understand.</p>
+        <p>If you visit <a href="https://babeljs.io/" target="_blank" class="highlighted">babeljs.io</a> and try out the "Try it Out" feature, you’ll notice how Babel converts JSX into <strong class="highlighted">React.createElement()</strong> calls. Here’s how you can quickly set up Babel in your project:</p>
+        <p>Add the following Babel CDN link to your project to compile JSX on the fly:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">src</span>=<span class="html-value">"https://unpkg.com/babel-standalone@6/babel.min.js"</span><span class="html-tag">&gt;&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>Next, change the <strong class="highlighted">&lt;script&gt;</strong> tag that contains JSX from <strong class="highlighted">text/javascript</strong> to <strong class="highlighted">text/babel</strong>:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/babel"</span><span class="html-tag">&gt;</span>
+    <span class="html-tag">&lt;</span><span class="html-tag">ul</span><span class="html-tag">&gt;</span>
+        <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>🤖<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+        <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>🤠<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+        <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>🌙<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+    <span class="html-tag">&lt;/</span><span class="html-tag">ul</span><span class="html-tag">&gt;</span>
+    <span class="js-func">ReactDOM.render</span>(list, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>This will tell Babel to transform the JSX into valid JavaScript that the browser can understand. Keep in mind, this approach is good for development but not optimized for production. In later sections, we’ll discuss how to compile your code before it reaches the browser for better performance.</p>
+    </section>
+
+</body>
+</html>

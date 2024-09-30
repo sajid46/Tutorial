@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 - Creating React Elements</title>
+    <link rel="stylesheet" href="../../global.css">
+</head>
+<body>
+
+    <!-- Main heading at the top right corner -->
+    <div class="chapter-heading">Chapter 2 - Intro to React Elements</div>
+
+    <!-- Subheading at the top center -->
+    <div class="chapter-subheading">(2) - Creating React Elements</div>
+
+    <section>
+        <h2>Creating React Elements</h2>
+        <p>We are using the <strong class="highlighted">ReactDOM.render()</strong> function to take the <strong class="highlighted">createElement()</strong> call that we added and inject it into the document at the element called <span class="highlighted">root</span>. We are telling React to find that element on the page and render our React code inside it.</p>
+        <p>In React, we think of elements as little bits of UI that can be rendered at any time. Instead of nesting functions inside other functions, let’s create a <strong class="highlighted">variable</strong> for the element.</p>
+        <p>Here’s the modified code where we assign the React element to a variable:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/javascript"</span><span class="html-tag">&gt;</span>
+    <span class="js-keyword">const</span> heading = <span class="js-func">React.createElement</span>(<span class="js-keyword">'h1'</span>, <span class="js-keyword">null</span>, <span class="js-keyword">'Getting Started with React!!!'</span>);
+    <span class="js-func">ReactDOM.render</span>(heading, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>This creates a React element and assigns it to the <strong>heading</strong> variable. Now, React can render this element at any time. We also added a couple of exclamation marks to confirm it works. And it does!</p>
+    </section>
+
+</body>
+</html>

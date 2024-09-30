@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3 - Creating a React Component</title>
+    <link rel="stylesheet" href="../../global.css">
+</head>
+<body>
+
+    <!-- Main heading at the top right corner -->
+    <div class="chapter-heading">Chapter 3 - React Component</div>
+
+    <!-- Subheading at the top center -->
+    <div class="chapter-subheading">(1) - Creating a React Component</div>
+
+    <section>
+        <h2>Creating a React Component</h2>
+        <p>In React, components are the building blocks of the user interface. A component is simply a JavaScript function that returns JSX. Let’s start by creating our first component:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/babel"</span><span class="html-tag">&gt;</span>
+    <span class="js-keyword">function</span> <span class="js-func">Header</span>() {
+        <span class="js-keyword">return</span> (
+            <span class="html-tag">&lt;</span><span class="html-tag">h1</span><span class="html-tag">&gt;</span>Eve's Kitchen<span class="html-tag">&lt;/</span><span class="html-tag">h1</span><span class="html-tag">&gt;</span>
+        );
+    }
+
+    <span class="js-func">ReactDOM.render</span>(<span class="html-tag">&lt;</span><span class="html-tag">Header</span><span class="html-tag">&gt;</span>, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>Once we create our first component, <strong>Header</strong>, we use the <strong class="highlighted">ReactDOM.render()</strong> function to render the component to the DOM. Now, let's add another component:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/babel"</span><span class="html-tag">&gt;</span>
+    <span class="js-keyword">function</span> <span class="js-func">Main</span>() {
+        <span class="js-keyword">return</span> (
+            <span class="html-tag">&lt;</span><span class="html-tag">section</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">p</span><span class="html-tag">&gt;</span>We serve the most delicious food around.<span class="html-tag">&lt;/</span><span class="html-tag">p</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;/</span><span class="html-tag">section</span><span class="html-tag">&gt;</span>
+        );
+    }
+
+    <span class="js-func">ReactDOM.render</span>(<span class="html-tag">&lt;</span><span class="html-tag">Main</span><span class="html-tag">&gt;</span>, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>When creating components, always remember to use capital letters for the component names and return JSX. You can combine multiple components into a parent component, as shown below:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/babel"</span><span class="html-tag">&gt;</span>
+    <span class="js-keyword">function</span> <span class="js-func">App</span>() {
+        <span class="js-keyword">return</span> (
+            <span class="html-tag">&lt;</span><span class="html-tag">div</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">Header</span><span class="html-tag">&gt;</span>
+                <span class="html-tag">&lt;</span><span class="html-tag">Main</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;/</span><span class="html-tag">div</span><span class="html-tag">&gt;</span>
+        );
+    }
+
+    <span class="js-func">ReactDOM.render</span>(<span class="html-tag">&lt;</span><span class="html-tag">App</span><span class="html-tag">&gt;</span>, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>In this example, we created an <strong>App</strong> component that renders both the <strong>Header</strong> and <strong>Main</strong> components. Always remember that React requires adjacent JSX elements to be wrapped in an enclosing tag, such as a <strong class="highlighted">&lt;div&gt;</strong>.</p>
+    </section>
+
+</body>
+</html>
