@@ -1,0 +1,147 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+    color: #34495e;
+    line-height: 1.7;
+}
+
+.chapter-heading {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: .8 rem;
+    color: #e5eaee;
+    background: #080909;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+/* Subheading at the top center */
+.chapter-subheading {
+    text-align: center;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    right: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #dde2e6;
+    background: black;
+    width: fit-content;
+    padding: 10px 26px;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+/* Styles for code inside the pre block */
+pre {
+    background-color: #111112;
+    padding: 24px 10px 0px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #34495e;
+    overflow-x: auto;
+    height: fit-content;
+    margin: 0px;
+}
+
+code {
+    color: #e74c3c;
+    background: transparent;
+    padding: 0px;
+}
+
+/* Highlighting specific elements inside <pre><code> */
+.html-tag { color: #3498db; }      /* HTML Tags */
+.html-attr { color: #f39c12; }     /* HTML Attributes */
+.html-value { color: #e67e22; }    /* Attribute Values */
+.js-func { color: #2ecc71; }       /* JavaScript Functions */
+.js-keyword { color: #e74c3c; }    /* JavaScript Keywords */
+.dom-method { color: #9b59b6; }    /* DOM Methods */
+
+/* Styling for tags and script elements outside code blocks */
+.highlighted {
+    color: rgb(61, 59, 59);
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px dotted gray;
+}
+
+a{
+    color:#2980b9 !important;
+}
+
+/* Header Styles */
+.chapter-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.chapter-left {
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: #bdc3c7;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.chapter-right {
+    font-size: 1.8rem;
+    text-align: center;
+    flex: 1;
+}
+
+/* Section Styles */
+section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 75px 0px 20px 0px;
+    padding: 20px;
+}
+
+h2 {
+    color: #2980b9;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Code Styling */
+pre {
+    background-color: #111112;
+    padding: 24px 10px 0px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #34495e;
+    overflow-x: auto;
+    height: fit-content;
+    margin: 0px;
+}
+code {
+    color: #e74c3c;
+    background: transparent;
+    padding: 0px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-style: italic;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    color: #7f8c8d;
+}

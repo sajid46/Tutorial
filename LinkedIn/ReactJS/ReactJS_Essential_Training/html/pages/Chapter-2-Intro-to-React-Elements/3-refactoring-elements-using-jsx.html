@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 - Refactoring Elements Using JSX</title>
+    <link rel="stylesheet" href="../../global.css">
+</head>
+<body>
+
+    <!-- Main heading at the top right corner -->
+    <div class="chapter-heading">Chapter 2 - Intro to React Elements</div>
+
+    <!-- Subheading at the top center -->
+    <div class="chapter-subheading">(3) - Refactoring Elements Using JSX</div>
+
+    <section>
+        <h2>Refactoring Elements Using JSX</h2>
+        <p>We are going to refactor the code using <strong class="highlighted">JSX</strong>. Initially, we are creating elements using <strong class="highlighted">React.createElement()</strong>, but as our user interface becomes more complex, using JSX simplifies the process. Here’s how:</p>
+        <p>First, we will change the heading to an unordered list (<strong class="highlighted">&lt;ul&gt;</strong>) and add multiple child elements, such as list items:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/javascript"</span><span class="html-tag">&gt;</span>
+    <span class="js-func">ReactDOM.render</span>(
+        <span class="js-func">React.createElement</span>(
+            <span class="js-keyword">'ul'</span>, 
+            <span class="js-keyword">null</span>, 
+            <span class="js-func">React.createElement</span>(<span class="js-keyword">'li'</span>, <span class="js-keyword">null</span>, <span class="js-keyword">'Monday'</span>),
+            <span class="js-func">React.createElement</span>(<span class="js-keyword">'li'</span>, <span class="js-keyword">null</span>, <span class="js-keyword">'Tuesday'</span>),
+            <span class="js-func">React.createElement</span>(<span class="js-keyword">'li'</span>, <span class="js-keyword">null</span>, <span class="js-keyword">'Wednesday'</span>)
+        ), 
+        <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>)
+    );
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>However, as the user interface grows, this approach becomes inefficient. That’s where <strong class="highlighted">JSX</strong> comes in. JSX allows us to use HTML-like syntax to create UI elements without needing to call <strong class="highlighted">React.createElement()</strong> multiple times. Here’s the JSX equivalent:</p>
+        <pre>
+<code>
+<span class="html-tag">&lt;</span><span class="html-tag">script</span> <span class="html-attr">type</span>=<span class="html-value">"text/javascript"</span><span class="html-tag">&gt;</span>
+    <span class="js-keyword">const</span> list = (
+        <span class="html-tag">&lt;</span><span class="html-tag">ul</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>🤖<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>🤠<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+            <span class="html-tag">&lt;</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>🌙<span class="html-tag">&lt;/</span><span class="html-tag">li</span><span class="html-tag">&gt;</span>
+        <span class="html-tag">&lt;/</span><span class="html-tag">ul</span><span class="html-tag">&gt;</span>
+    );
+    <span class="js-func">ReactDOM.render</span>(list, <span class="dom-method">document.getElementById</span>(<span class="js-keyword">'root'</span>));
+<span class="html-tag">&lt;/</span><span class="html-tag">script</span><span class="html-tag">&gt;</span>
+</code>
+        </pre>
+        <p>As you can see, JSX allows us to create elements using HTML-like syntax. However, this will throw an error if not processed correctly. We will fix this issue in the next step using Babel.</p>
+    </section>
+
+</body>
+</html>
